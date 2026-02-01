@@ -10,7 +10,7 @@ from django.utils import timezone
 from django.views.decorators.csrf import csrf_exempt
 from django.utils.decorators import method_decorator
 from api.models import PaymentTransaction, SubscriptionPlan, VoiceCall
-from api.serializers import PaymentTransactionSerializer
+from api.serializers import PaymentTransactionSerializer, SubscriptionPlanSerializer
 from api.paystack_client import PaystackClient
 from users.models import User
 
@@ -276,7 +276,7 @@ class PaystackWebhookAPI(APIView):
 class SubscriptionPlansAPI(generics.ListAPIView):
     """Get available subscription plans"""
     permission_classes = [permissions.IsAuthenticated]
-    serializer_class = PaymentTransactionSerializer
+    serializer_class = SubscriptionPlanSerializer
     
     def get_queryset(self):
         return SubscriptionPlan.objects.filter(is_active=True)

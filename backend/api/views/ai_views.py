@@ -180,10 +180,7 @@ class AIChatAPI(APIView):
                 query |= Q(title__icontains=keyword)
                 query |= Q(content__icontains=keyword)
                 query |= Q(reference__icontains=keyword)
-        
-        # Also search in keywords field
-        if keywords:
-            query |= Q(keywords__contains=keywords)
+                query |= Q(related_categories__keywords__icontains=keyword)
         
         # Get active sources
         sources = LegalSource.objects.filter(

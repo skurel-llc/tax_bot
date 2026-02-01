@@ -1,5 +1,5 @@
 # api/views/partner_views.py (complete version)
-from rest_framework import generics, permissions, filters
+from rest_framework import generics, permissions, filters, serializers
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from django_filters.rest_framework import DjangoFilterBackend
