@@ -591,18 +591,13 @@ class PaymentTransaction(models.Model):
 
 
     updated_at = models.DateTimeField(auto_now=True)
+    def __str__(self):
 
 
-    
 
 
-        def __str__(self):
 
-
-    
-
-
-            return f"Payment {self.id} - {self.user.email} - {self.amount:.2f}"
+        return f"Payment {self.id} - {self.user.email} - {self.amount:.2f}"
 
 
     

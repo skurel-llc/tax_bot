@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import React from 'react';
 
 const MavenLandingPage = () => {
@@ -21,12 +23,16 @@ const MavenLandingPage = () => {
             <a href="#" className="text-[#33455D] hover:text-[#4ECDC4] font-medium">Product</a>
             <a href="#" className="text-[#33455D] hover:text-[#4ECDC4] font-medium">Pricing</a>
             <a href="#" className="text-[#33455D] hover:text-[#4ECDC4] font-medium">Learn</a>
+            <Link to='/login'>
             <button className="px-4 py-2 text-[#33455D] font-medium hover:bg-gray-100 rounded-lg">
               Login
             </button>
+            </Link>
+            <Link to='/signup'>
             <button className="px-6 py-2 bg-[#4ECDC4] text-[#33455D] font-bold rounded-lg hover:bg-[#3ebbb3] transition-colors">
               Sign Up Free
             </button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -51,12 +57,16 @@ const MavenLandingPage = () => {
                 Navigate FIRS regulations, calculate liabilities, and automate your tax compliance with Maven's AI-powered precision. Built specifically for the Finance Act.
               </p>
               <div className="flex flex-wrap gap-4">
+                <Link to='/signup'>
                 <button className="px-8 py-3 bg-[#33455D] text-white font-bold rounded-lg hover:bg-[#2a384e] transition-colors shadow-lg">
                   Start Free Trial
                 </button>
+                </Link>
+                <Link to='/login'>
                 <button className="px-8 py-3 bg-[#4ECDC4] text-[#33455D] font-bold rounded-lg hover:bg-[#3ebbb3] transition-colors shadow-md">
                   Chat Now
                 </button>
+                </Link>
               </div>
             </div>
             <div className="relative">
